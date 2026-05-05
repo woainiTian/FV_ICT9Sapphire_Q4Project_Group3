@@ -11,8 +11,59 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
-    <link rel="stylesheet" href="css/portal.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      }
+      .top-bar {
+        background: rgba(0, 0, 0, 0.78);
+        color: #fff;
+        font-size: 0.95rem;
+      }
+      .hero {
+        min-height: calc(100vh - 44px);
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.62)),
+          url("YOUR_IMAGE_HERE.jpg") center/cover no-repeat;
+      }
+      .hero-title {
+        font-size: clamp(42px, 4.8vw, 72px);
+        letter-spacing: 0.4px;
+        line-height: 1.06;
+      }
+      .hero-kicker {
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        font-size: 0.95rem;
+      }
+      .brand-mark {
+        width: 44px;
+        height: 44px;
+        border: 2px solid rgba(255, 255, 255, 0.9);
+        border-radius: 14px;
+        display: grid;
+        place-items: center;
+      }
+      .brand-mark span {
+        color: #fff;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+      .pill {
+        border-radius: 999px;
+      }
+      .footer {
+        background: #101013;
+        color: rgba(255, 255, 255, 0.92);
+      }
+      .footer a {
+        color: rgba(255, 255, 255, 0.92);
+        text-decoration: underline;
+      }
+    </style>
   </head>
 
   <body data-page="login">
