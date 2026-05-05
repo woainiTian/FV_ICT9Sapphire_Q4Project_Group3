@@ -10,26 +10,39 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
       html,
       body {
         height: 100%;
       }
       body {
-        font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        font-family: "DM Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       }
       .top-bar {
-        background: rgba(0, 0, 0, 0.78);
+        background: #37312e;
         color: #fff;
         font-size: 0.95rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
       }
       .hero {
-        min-height: calc(100vh - 44px);
+        min-height: 100vh;
+        padding-top: 52px; /* space for fixed top bar */
         background: linear-gradient(180deg, rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.62)),
-          url("YOUR_IMAGE_HERE.jpg") center/cover no-repeat;
+          url("images/bg.png") center/cover no-repeat;
+      }
+      .hero-inner {
+        min-height: calc(100vh - 52px);
       }
       .hero-title {
+        font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
         font-size: clamp(42px, 4.8vw, 72px);
         letter-spacing: 0.4px;
         line-height: 1.06;
@@ -38,6 +51,20 @@
         letter-spacing: 0.22em;
         text-transform: uppercase;
         font-size: 0.95rem;
+      }
+      .kicker-line {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+        opacity: 0.95;
+      }
+      .kicker-line::before,
+      .kicker-line::after {
+        content: "";
+        height: 1px;
+        width: clamp(80px, 18vw, 240px);
+        background: rgba(255, 255, 255, 0.7);
       }
       .brand-mark {
         width: 44px;
@@ -52,16 +79,18 @@
         font-weight: 700;
         letter-spacing: 0.5px;
       }
-      .pill {
-        border-radius: 999px;
+      .hero-logo {
+        width: auto;
+        max-width: min(820px, 86vw);
+        max-height: 360px;
+        height: auto;
+        filter: none;
+        opacity: 0.96;
+        display: block;
+        margin: 0 auto;
       }
-      .footer {
-        background: #101013;
-        color: rgba(255, 255, 255, 0.92);
-      }
-      .footer a {
-        color: rgba(255, 255, 255, 0.92);
-        text-decoration: underline;
+      .btn-square {
+        border-radius: 0 !important;
       }
     </style>
   </head>
@@ -69,52 +98,32 @@
   <body data-page="login">
     <!-- Top bar (navbar on top) -->
     <div class="top-bar">
-      <div class="container-fluid px-5 d-flex justify-content-between align-items-center flex-wrap py-2">
-        <div>Get Directions on Campus</div>
+      <div class="container-fluid px-5 py-2">
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+          <div>Get Directions on Campus</div>
 
-        <div class="d-flex align-items-center gap-3">
-          <span class="me-3">+63 966 381 6462</span>
-          <a href="#" class="text-white me-2" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="text-white me-2" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="text-white" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <div class="d-flex align-items-center gap-3">
+            <span class="me-3">+63 966 381 6462</span>
+            <a href="#" class="text-white" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Login / Hero -->
-    <main class="hero d-flex align-items-center">
-      <div class="container hero-inner py-5">
-        <div class="row justify-content-center">
-          <div class="col-lg-10 text-center text-white">
-            <div class="d-flex justify-content-center mb-4">
-              <div class="brand-mark">
-                <span>SP</span>
-              </div>
-            </div>
+    <main class="hero">
+      <div class="container hero-inner d-flex flex-column justify-content-center align-items-center text-center text-white py-5">
+        <img class="hero-logo mb-3" src="images/logo-white.png" alt="CBT University of Film and Media Arts Logo" />
 
-            <div class="hero-kicker mb-3">Student Portal System</div>
-            <h1 class="hero-title fw-normal mb-4">Every Lesson Builds a Future.</h1>
-            <p class="mx-auto mb-5" style="max-width: 760px; opacity: 0.92;">
-              Log in to your student account to access your portal.
-            </p>
-
-            <a href="dashboard.html" class="btn btn-light btn-lg px-5 pill fw-semibold">
-              LOG IN STUDENT ACCOUNT
-            </a>
-          </div>
-        </div>
+        <div class="hero-kicker kicker-line mb-3">Film and Media Arts</div>
+        <h1 class="hero-title fw-normal mb-4">Every Vision Begins in a Frame.</h1>
+        <a href="dashboard.html" class="btn btn-light btn-lg px-5 btn-square fw-semibold">
+          LOG IN STUDENT ACCOUNT
+        </a>
       </div>
     </main>
-
-    <footer class="footer py-3">
-      <div class="container text-center small">
-        <div>Cabading, Bermudez &amp; Tian | Grade 9 - Sapphire</div>
-        <div>
-          Source: <a href="https://www.w3schools.com/" target="_blank" rel="noreferrer">w3schools.com</a> •
-          Images: (add your sources here)
-        </div>
-      </div>
-    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/portal.js"></script>
