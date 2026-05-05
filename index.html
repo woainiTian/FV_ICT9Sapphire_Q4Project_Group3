@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Student Portal System | Login</title>
-
+    <title>Landing Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- icon-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
-
+  <!-- fontss -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
     />
-    <style>
-      html,
-      body {
+<style>
+    body{
         height: 100%;
+        font-family: "DM Sans", system-ui, Arial, sans-serif;
       }
-      body {
-        font-family: "DM Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      }
-      .top-bar {
+
+      .nav-bar{
         background: #37312e;
         color: #fff;
         font-size: 0.95rem;
@@ -34,12 +32,9 @@
       }
       .hero {
         min-height: 100vh;
-        padding-top: 52px; /* space for fixed top bar */
+        padding-top: 52px;
         background: linear-gradient(180deg, rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.62)),
           url("images/bg.png") center/cover no-repeat;
-      }
-      .hero-inner {
-        min-height: calc(100vh - 52px);
       }
       .hero-title {
         font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
@@ -47,18 +42,12 @@
         letter-spacing: 0.4px;
         line-height: 1.06;
       }
-      .hero-kicker {
-        letter-spacing: 0.22em;
-        text-transform: uppercase;
-        font-size: 0.95rem;
-      }
       .kicker-line {
         display: flex;
         align-items: center;
-        justify-content: center;
         gap: 18px;
-        opacity: 0.95;
       }
+
       .kicker-line::before,
       .kicker-line::after {
         content: "";
@@ -66,38 +55,20 @@
         width: clamp(80px, 18vw, 240px);
         background: rgba(255, 255, 255, 0.7);
       }
-      .brand-mark {
-        width: 44px;
-        height: 44px;
-        border: 2px solid rgba(255, 255, 255, 0.9);
-        border-radius: 14px;
-        display: grid;
-        place-items: center;
-      }
-      .brand-mark span {
-        color: #fff;
-        font-weight: 700;
-        letter-spacing: 0.5px;
-      }
+
       .hero-logo {
         width: auto;
-        max-width: min(820px, 86vw);
-        max-height: 360px;
+        max-height: 700px;
         height: auto;
-        filter: none;
-        opacity: 0.96;
         display: block;
-        margin: 0 auto;
-      }
-      .btn-square {
-        border-radius: 0 !important;
+        margin-top: -40px;
       }
     </style>
   </head>
 
-  <body data-page="login">
-    <!-- Top bar (navbar on top) -->
-    <div class="top-bar">
+  <body>
+    <!-- navbar -->
+    <div class="nav-bar">
       <div class="container-fluid px-5 py-2">
         <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
           <div>Get Directions on Campus</div>
@@ -112,13 +83,14 @@
       </div>
     </div>
 
-    <!-- Login / Hero -->
+    <!-- Hero, login smth smth -->
     <main class="hero">
       <div class="container hero-inner d-flex flex-column justify-content-center align-items-center text-center text-white py-5">
         <img class="hero-logo mb-3" src="images/logo-white.png" alt="CBT University of Film and Media Arts Logo" />
 
         <div class="hero-kicker kicker-line mb-3">Film and Media Arts</div>
         <h1 class="hero-title fw-normal mb-4">Every Vision Begins in a Frame.</h1>
+        <br><br>
         <a href="dashboard.html" class="btn btn-light btn-lg px-5 btn-square fw-semibold">
           LOG IN STUDENT ACCOUNT
         </a>
