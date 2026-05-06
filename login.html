@@ -106,7 +106,7 @@
               <form onsubmit="return false;">
                 <div class="mb-3">
                   <div class="main-id mb-2">Student ID:</div>
-                  <input id="studentId" class="form-control text-input" type="text" placeholder="Enter Student ID" />
+                  <input id="username" class="form-control text-input" type="text" placeholder="Enter Student ID" />
                 </div>
 
                 <div class="mb-4">
@@ -114,9 +114,9 @@
                   <input id="password" class="form-control text-input" type="password" placeholder="Enter Password" />
                 </div>
 
-                <div id="loginMsg" class="mt-3 fw-semibold" style="color: #dc3545; display: none;"></div>
+                <div id="error" class="mt-3 fw-semibold" style="color: #dc3545;"></div>
 
-                <button id="loginBtn" class="btn btn-dark w-100 btn-square login-btn mt-3" type="button">
+                <button id="loginBtn" class="btn btn-dark w-100 btn-square login-btn mt-3" type="button" onclick="login()">
                   LOG IN STUDENT ACCOUNT
                 </button>
 
@@ -144,47 +144,36 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-      const ID = "jjj";
-      const PASS = "29112711";
+      let attempt_counter = 0;
 
-      const msg = document.getElementById("loginMsg");
+/* login stuff */
+   function login() {
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
 
-      let tries = 0;
+        let correct_user = "jjj";
+        let correct_pass = "29112711";
 
-      document.getElementById("loginBtn").addEventListener("click", () => {
-        let ok = false;
-        msg.style.display = "none";
-        msg.textContent = "";
-
-        do {
-          const id = String(document.getElementById("studentId").value || "").trim();
-          const pass = String(document.getElementById("password").value || "");
-
-          if (id === ID && pass === PASS) {
-            ok = true;
-            break;
-          }
-
-          tries += 1;
-        } while (false);
-
-        if (ok) {
+        if (username === correct_user && password === correct_pass) {
+          attempt_counter = 0;
+          document.getElementById("error").innerHTML = "";
           window.location.href = "dashboard.html";
           return;
+        } else {
+          attempt_counter++;
+          document.getElementById("error").innerHTML =
+            "Incorrect username and/or password. Attempt " + attempt_counter + " of 3";
         }
 
-        if (tries < 3) {
-          msg.style.display = "block";
-          msg.textContent = `Incorrect Student ID or Password. Try again. (${tries}/3)`;
-          return;
-        }
-
-        msg.style.display = "block";
-        msg.textContent = "Too many attempts. Please refresh the page and try again.";
-        document.getElementById("loginBtn").disabled = true;
-        document.getElementById("studentId").disabled = true;
-        document.getElementById("password").disabled = true;
-      });
+        do {
+          if (attempt_counter >= 3) {
+            document.getElementById("error").innerHTML = "Too many attempts.";
+            document.getElementById("loginBtn").disabled = true;
+            document.getElementById("username").disabled = true;
+            document.getElementById("password").disabled = true;
+          }
+        } while (false);
+      }
     </script>
   </body>
 </html>
