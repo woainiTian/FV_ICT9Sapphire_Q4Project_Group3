@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notebooks | CBT University</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- icon-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <!-- fontss -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+    />
+<style>
+    body{
+      height: 100%;
+      font-family: "Montserrat", system-ui, Arial, sans-serif;
+      }
+/* navbar */
+      .topbar {
+        background: #c48e45;
+        color: #fff;
+        font-size: 15px;
+      }
+
+      .mainbar{
+        background: #2f2a28;
+        
+      }
+      .brand-title{
+        font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+        font-size: 29px;
+        color: #fff;
+      }
+      .nav-link{
+        color: rgba(255, 255, 255, 0.92);
+      }
+/* end of navbar */
+
+      .hero {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.2)),
+          url("images/bg.png") no-repeat;
+        color: #fff;
+        padding: 64px 0;
+      }
+      .hero h1 {
+        font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+        font-size: clamp(56px, 6vw, 90px);
+        line-height: 0.95;
+        margin: 0 0 10px;
+      }
+      .hero p {
+        max-width: 520px;
+        opacity: 0.95;
+        margin: 0;
+      }
+
+      .cards-wrap {
+        padding: 46px 0 60px;
+      }
+      .notebook-card {
+        background: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+        height: 100%;
+      }
+      .card-band {
+        background: #cfa15d;
+        color: #fff;
+        font-weight: 600;
+        padding: 18px 18px;
+        font-size: 1.25rem;
+      }
+      .card-body-text {
+        color: #6c757d;
+        font-size: 0.92rem;
+        line-height: 1.4;
+        padding: 18px 18px 6px;
+        min-height: 74px;
+      }
+      .card-teacher {
+        padding: 0 18px 16px;
+        font-size: 0.82rem;
+        color: #111;
+        font-weight: 600;
+      }
+
+      .pill-btn {
+        border-radius: 999px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- top navbar (topbar ung pangalan) -->
+    <div class="topbar py-2">
+      <div class="container-fluid px-5 d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <div class="d-flex align-items-center gap-4 flex-wrap">
+          <span>Get Directions on Campus</span>
+          <span>Careers</span>
+          <span>Library</span>
+        </div>
+
+        <div class="d-flex align-items-center gap-3">
+          <span class="me-3">+63 000 000 0000</span>
+          <a href="#" class="text-white" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-white" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-white" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- main navbar (mainbar ung pangalan) -->
+    <div class="mainbar py-3">
+      <div class="container-fluid px-5">
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+          <div class="d-flex align-items-center gap-4">
+            <span class="nav-link">Home</span>
+            <span class="nav-link">Notebooks</span>
+            <span class="nav-link">Tasks</span>
+          </div>
+
+          <div class="brand-title text-center flex-grow-1">CBT University of Film and Media Arts</div>
+
+          <div class="d-flex align-items-center gap-3">
+            <span class="nav-link">Profile</span>
+            <button class="btn btn-light px-4 pill-btn" type="button">Log Out</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container-fluid px-5">
+        <h1>Notebooks</h1>
+        <p>
+          Access your classes, view announcements, and<br />
+          keep track of course materials—all in one place.
+        </p>
+      </div>
+    </section>
+
+    <!-- Cards -->
+    <section class="cards-wrap">
+      <div class="container-fluid px-5">
+        <div class="row g-4 justify-content-center">
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="notebook-card">
+              <div class="card-band">Basic Film Production</div>
+              <div class="card-body-text">Hands-on fundamentals of filming and production.</div>
+              <div class="card-teacher">Ms. Anya Teressa Tan</div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="notebook-card">
+              <div class="card-band">Creative and Narrative Class</div>
+              <div class="card-body-text">Story structure, character, and script development.</div>
+              <div class="card-teacher">Ms. Anya Teressa Tan</div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="notebook-card">
+              <div class="card-band">Film Business and Marketing</div>
+              <div class="card-body-text">Industry basics, distribution, and audience strategy.</div>
+              <div class="card-teacher">Mr. Adrik Vergara</div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="notebook-card">
+              <div class="card-band">Visual Production</div>
+              <div class="card-body-text">Cinematography, lighting, and technical execution.</div>
+              <div class="card-teacher">Ms. Angeleen Pia Palagud</div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="notebook-card">
+              <div class="card-band">Film Theory and History</div>
+              <div class="card-body-text">Key movements, analysis, and critical perspectives.</div>
+              <div class="card-teacher">Mr. Peter Philip Abalos</div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="notebook-card">
+              <div class="card-band">Film Ethics and Media Law</div>
+              <div class="card-body-text">Legal frameworks, rights, and ethical decisions in media.</div>
+              <div class="card-teacher">Ms. Lian Ashley Barrameda</div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="notebook-card">
+              <div class="card-band">Dramatics and Acting</div>
+              <div class="card-body-text">Performance, character work, and on-camera presence.</div>
+              <div class="card-teacher">Mr. Nicolo Pascual</div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="notebook-card">
+              <div class="card-band">Production and Costume Design</div>
+              <div class="card-body-text">Designing wardrobes and sets for film productions.</div>
+              <div class="card-teacher">Mr. John Karl Montemayor</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </body>
+</html>
