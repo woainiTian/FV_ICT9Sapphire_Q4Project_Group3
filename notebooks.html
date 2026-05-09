@@ -20,24 +20,12 @@
       font-family: "Montserrat", system-ui, Arial, sans-serif;
       }
 /* navbar */
-      .topbar {
-        background: #c48e45;
-        color: #fff;
-        font-size: 15px;
-      }
+     .topbar {
+       background: #c48e45;
+       color: #fff;
+       font-size: 15px;
+     }
 
-      .mainbar{
-        background: #2f2a28;
-        
-      }
-      .brand-title{
-        font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-        font-size: 29px;
-        color: #fff;
-      }
-      .nav-link{
-        color: rgba(255, 255, 255, 0.92);
-      }
 
       .logout-btn{
         border-radius: 999px;
@@ -69,6 +57,8 @@
         border: 1px solid rgba(0, 0, 0, 0.08);
         box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
         height: 100%;
+        width:300px;
+          
       }
       .vn-subj{
         background: #cfa15d;
@@ -76,6 +66,8 @@
         font-weight: 600;
         padding: 18px 18px;
         font-size: 1.25rem;
+        height:100px;
+          
       }
       .vn-body-text{
         color: #6c757d;
@@ -94,44 +86,48 @@
     </style>
   </head>
 
-  <body>
-    <!-- top navbar (topbar ung pangalan) -->
-    <div class="topbar py-2">
-      <div class="container-fluid px-5 d-flex justify-content-between align-items-center flex-wrap gap-2">
-        <div class="d-flex align-items-center gap-4 flex-wrap">
-          <span>Get Directions on Campus</span>
-          <span>Careers</span>
-          <span>Library</span>
-        </div>
+ <body>
+   <!-- top navbar (topbar ung pangalan) -->
+   <div class="topbar py-2">
+     <div class="container-fluid px-5 d-flex justify-content-between align-items-center flex-wrap gap-2">
+       <div class="d-flex align-items-center gap-4 flex-wrap">
+         <span class="nav-link">Get Directions on Campus</span>
+         <span class="nav-link">Careers</span>
+         <span class="nav-link">Library</span>
+       </div>
 
-        <div class="d-flex align-items-center gap-3">
-          <span class="me-3">+63 000 000 0000</span>
-          <a href="#" class="text-white" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="text-white" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="text-white" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-        </div>
-      </div>
-    </div>
 
-    <!-- main navbar (mainbar ung pangalan) -->
-    <div class="mainbar py-3">
-      <div class="container-fluid px-5">
-        <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
-          <div class="d-flex align-items-center gap-4">
-            <span class="nav-link">Home</span>
-            <span class="nav-link">Notebooks</span>
-            <span class="nav-link">Tasks</span>
-          </div>
+       <div class="d-flex align-items-center gap-3">
+         <span class="me-3">+63 000 000 0000</span>
+         <a href="https://www.facebook.com/" class="text-white" aria-label="Facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+         <a href="https://www.instagram.com/" class="text-white" aria-label="Instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+         <a href="https://www.youtube.com/" class="text-white" aria-label="YouTube" target="_blank"><i class="bi bi-youtube"></i></a>
+   </div>
+   </div>
+   </div>
 
-          <div class="brand-title text-center flex-grow-1">CBT University of Film and Media Arts</div>
 
-          <div class="d-flex align-items-center gap-3">
-            <span class="nav-link">Profile</span>
-            <button class="btn btn-light px-4 logout-btn" type="button">Log Out</button>
-          </div>
-        </div>
-      </div>
-    </div>
+   <!-- main navbar (mainbar ung pangalan) -->
+   <div class="mainbar py-3">
+     <div class="container-fluid px-5">
+       <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+         <div class="d-flex align-items-center gap-4">
+           <a href="dashboard.html" class="nav-link text-decoration-none">Home</a>
+           <a href="notebooks.html" class="nav-link text-decoration-none">Notebooks</a>
+           <a href="tasks.html" class="nav-link text-decoration-none">Tasks</a>
+         </div>
+
+
+         <div class="brand-title text-center flex-grow-1">CBT University of Film and Media Arts</div>
+
+
+         <div class="d-flex align-items-center gap-3">
+           <a href="profile.html" class="nav-link text-decoration-none">Profile</a>
+           <a href="login.html" class="btn btn-light px-4 logout-btn">Log Out</a>
+   </div>
+   </div>
+   </div>
+   </div>
 
     <!-- Hero (kicker)-->
     <section class="hero">
