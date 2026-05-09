@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notebooks | CBT University</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- icon-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <!-- fontss -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+    />
+<style>
+    body{
+        height: 100%;
+        font-family: "Montserrat", system-ui, Arial, sans-serif;
+    }
+/* navbar */
+     .topbar {
+       background: #c48e45;
+       color: #fff;
+       font-size: 15px;
+     }
+
+
+     .mainbar{
+       background: #2f2a28;
+      
+     }
+     .brand-title{
+       font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+       font-size: 29px;
+       color: #fff;
+     }
+     .nav-link{
+       color: rgba(255, 255, 255, 0.92);
+       font-size: smaller;
+       cursor: pointer;
+     }
+
+
+     .logout-btn{
+       border-radius: 999px;
+     }
+
+     .nav-link:hover {
+  color: #f9bb58; }
+
+/* end of navbar */
+
+    /* profile card box part*/
+
+    .card-box{
+        background:white;
+        border-radius:18px;
+        overflow:hidden;
+        box-shadow:0 5px 15px rgba(0,0,0,0.1);
+        width:95%;
+        margin:25px auto 100px;
+    }
+
+    .banner{
+        height:150px;
+        background-image:url("ICT9 Profile BG.png");
+        background-size:cover;
+        background-position:center;
+    }
+
+    .profile-content{
+        padding:20px 45px 40px;
+        display:flex;
+        gap:70px;
+        position:relative;
+    }
+
+    .left-side{
+        width:250px;
+    }
+
+    .pfp{
+        width:135px;
+        height:135px;
+        border-radius:50%;
+        border:5px solid white;
+        object-fit:cover;
+        margin-top:-90px;
+        background:white;
+    }
+
+    .name{
+        font-family:"Cormorant Garamond";
+        font-size:28px;
+        font-weight:bold;
+        margin-top:10px;
+    }
+
+    .role{
+        color:#c48e45;
+        font-size:18px;
+        font-family:Montserrat;
+    }
+
+    .grade{
+        color:#c48e45;
+        font-size:16px;
+        margin-bottom:22px;
+        font-family:Montserrat;
+    }
+
+    .password-btn{
+        background:#c48e45;
+        color:white;
+        border:gray;
+        padding:10px 16px;
+        border-radius:8px;
+        font-weight:bold;
+        font-size:14px;
+        font-family:Montserrat;
+    }
+
+    .password-btn:hover{
+        background:#a87434;
+    }
+
+    .edit-btn{
+        position:absolute;
+        top:25px;
+        right:35px;
+        background:#b9b9b9;
+        color:white;
+        border:none;
+        padding:7px 15px;
+        border-radius:12px;
+        font-size:14px;
+        font-family:Montserrat;
+    }
+
+    .edit-btn:hover{
+        background:#8d8d8d;
+    }
+
+    .info-title{
+        font-size:22px;
+        margin-bottom:25px;
+        font-family:Montserrat;
+    }
+
+    .info-grid{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:25px 90px;
+    }
+
+    .label{
+        font-size:16px;
+        color:#444;
+        font-family:Montserrat;
+    }
+
+    .value{
+        font-size:16px;
+        font-weight:bold;
+        border:none;
+        width:100%;
+        font-family:Montserrat;
+    }
+
+    /* FOOTER */
+
+    footer{
+       position: fixed;
+       bottom: 0px;
+       width: 100%;
+       text-align: center;
+       color: #ffffff;
+       font-size: 12px;
+       background-color: #2f2a28;
+       opacity: 90%;
+       }
+
+
+    </style>
+  </head>
+
+<body>
+
+   <!-- top navbar (topbar ung pangalan) -->
+   <div class="topbar py-2">
+     <div class="container-fluid px-5 d-flex justify-content-between align-items-center flex-wrap gap-2">
+       <div class="d-flex align-items-center gap-4 flex-wrap">
+         <span class="nav-link">Get Directions on Campus</span>
+         <span class="nav-link">Careers</span>
+         <span class="nav-link">Library</span>
+       </div>
+
+
+       <div class="d-flex align-items-center gap-3">
+         <span class="me-3">+63 000 000 0000</span>
+         <a href="https://www.facebook.com/" class="text-white" aria-label="Facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+         <a href="https://www.instagram.com/" class="text-white" aria-label="Instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+         <a href="https://www.youtube.com/" class="text-white" aria-label="YouTube" target="_blank"><i class="bi bi-youtube"></i></a>
+   </div>
+   </div>
+   </div>
+
+
+   <!-- main navbar (mainbar ung pangalan) -->
+   <div class="mainbar py-3">
+     <div class="container-fluid px-5">
+       <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+         <div class="d-flex align-items-center gap-4">
+           <a href="dashboard.html" class="nav-link text-decoration-none">Home</a>
+           <a href="notebooks.html" class="nav-link text-decoration-none">Notebooks</a>
+           <a href="tasks.html" class="nav-link text-decoration-none">Tasks</a>
+         </div>
+
+
+         <div class="brand-title text-center flex-grow-1">CBT University of Film and Media Arts</div>
+
+
+         <div class="d-flex align-items-center gap-3">
+           <a href="profile.html" class="nav-link text-decoration-none">Profile</a>
+           <a href="login.html" class="btn btn-light px-4 logout-btn">Log Out</a>
+   </div>
+   </div>
+   </div>
+   </div>
+
+<!-- PROFILE CARD -->
+
+<div class="card-box">
+
+    <div class="banner"></div>
+
+    <div class="profile-content">
+
+        <button class="edit-btn">
+            <i class="bi bi-pencil-square"></i> Edit
+        </button>
+
+        <!-- LEFT SIDE -->
+
+        <div class="left-side">
+
+            <img
+                id="profileImage"
+                src="https://i.pinimg.com/736x/3f/d7/1a/3fd71a4a5b22523b415c04b22e0210ba.jpg"
+                class="pfp"
+            >
+
+            <br>
+
+            <!-- UPLOAD BUTTONzs -->
+
+            <button class="password-btn mt-2" id="uploadBtn">
+                UPLOAD PROFILE
+            </button>
+
+            <!-- HIDDEN FILE INPUT -->
+
+            <input type="file" id="fileInput" accept="image/*" hidden>
+
+            <div class="name" contenteditable="true">
+                Janiella Cabrian
+            </div>
+
+            <div class="role" contenteditable="true">
+                Student
+            </div>
+
+            <div class="grade" contenteditable="true">
+                Grade 9
+            </div>
+
+            <button class="password-btn"
+            onclick="alert('A password reset link was sent to your school email.')">
+
+                Change Password
+
+            </button>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+
+        <div class="right-side">
+
+            <div class="info-title">
+                Personal Information
+            </div>
+
+            <div class="info-grid">
+
+                <div>
+                    <div class="label">Student ID</div>
+                    <input class="value" value="11229711">
+                </div>
+
+                <div>
+                    <div class="label">Password</div>
+                    <input class="value" value="************">
+                </div>
+
+                <div>
+                    <div class="label">Contact Number</div>
+                    <input class="value" value="0297111209">
+                </div>
+
+                <div>
+                    <div class="label">Course</div>
+                    <input class="value" value="Cinematography 101">
+                </div>
+
+                <div>
+                    <div class="label">Email Address</div>
+                    <input class="value" value="CabrianJ@cbtuniv.edu.ph">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+    © Copyright Cabading, Bermudez, Tian | 9 Sapphire
+</footer>
+
+
+
+<script>
+
+    // to open files
+
+    document.getElementById("uploadBtn").onclick = function () {
+
+        document.getElementById("fileInput").click();
+
+    };
+
+    // change profile picture function
+
+    document.getElementById("fileInput").onchange = function (event) {
+
+        document.getElementById("profileImage").src =
+        URL.createObjectURL(event.target.files[0]);
+
+    };
+
+</script>
+
+</body>
+</html>
+
